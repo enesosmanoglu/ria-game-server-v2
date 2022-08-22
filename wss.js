@@ -24,6 +24,9 @@ const wss = new WebSocketServer({
     }
 });
 
+wss.on("listening", () => {
+    console.log("Server started.")
+})
 wss.on('close', ws => {
     console.log('Server closed.');
 });
@@ -47,7 +50,6 @@ wss.broadcast = function (data = {}, ...blacklist) {
         }
     });
 };
-
 
 wss.on('connection', (ws, request) => {
     ws.ip = request.headers.hasOwnProperty("x-forwarded-for") ? request.headers["x-forwarded-for"].split(',')[0] : "Localhost";

@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
     "colors": "^1.4.0",
     "osman.js": "^2.0.0",
     "ws": "^8.8.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
